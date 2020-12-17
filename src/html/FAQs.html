@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FAQs</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body onscroll="scrollFunction()">
+
+<div class="header">
+    <h1 class="title">Novemberfest</h1>
+</div>
+
+<div id="menubar">
+    <a href="Home.html">Home</a>
+    <a href="FAQs.html">FAQs</a>
+    <a style="float: right" href="Contact.html">Contact</a>
+</div>
+
+<div class="content">
+
+    <div class="jumbotron">
+        <p>Beste bezoeker, heeft u nog verdere vragen. Voordat u contact opneemt is het slim om in de faq te kijken.
+            Hier zijn de meest gestelde vragen al beatwoord</p>
+    </div>
+
+    <button class="accordion">Wat is het Novemberfestival</button>
+    <div class="panel">
+        <p>Het Novemberfest is een muziek evenement dat jaarlijks plaats vindt in het volkspark</p>
+    </div>
+
+    <button class="accordion">Wanneer vindt het Novemerfest plaats?</button>
+    <div class="panel">
+        <p>Zoals de naam al suggereertm vindt het Novemberfest in november plaats.</p>
+    </div>
+
+    <button class="accordion">Wat zijn de voorzieningen op het festivalterrein?</button>
+    <div class="panel">
+        <p>Eigenlijk zijn er geen voorzieningen</p>
+    </div>
+
+    <button class="accordion">Hoe kan ik kaarten bestellen?</button>
+    <div class="panel">
+        <p>De kaarten zijn te bestellen via de homepage, u kunt een concert selecteren. U wordt automatisch doorgestuurd
+            naar de bestelpagina. Hier vult u uw gegevens in. U krijgt een bevestiging van uw bestelling</p>
+    </div>
+
+
+</div>
+
+<script type="text/javascript" src="../js/Script.js"></script>
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function () {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        }
+    }
+</script>
+</body>
+</html>

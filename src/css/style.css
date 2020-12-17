@@ -1,0 +1,419 @@
+*, *:after, *:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --------------------------------
+
+Primary style
+
+-------------------------------- */
+
+body {
+  font-size: 15px;
+  font-family: "Asul", serif;
+  color: #979688;
+  background-color: #e9f0f5;
+}
+
+/* --------------------------------
+
+Modules - reusable parts of our design
+
+-------------------------------- */
+
+button {
+  background-color: cornflowerblue;
+  border: cornflowerblue;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+
+}
+
+.agenda_container {
+  width: 85%;
+  max-width: 1280px;
+  margin: 0 auto;
+
+}
+
+/* --------------------------------
+
+Main components
+
+-------------------------------- */
+
+#agenda {
+  position: relative;
+  padding: 15px;
+}
+
+#agenda::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 5px;
+  background: #d7e4ed;
+}
+
+.evenement {
+  position: relative;
+  margin: 2em;
+}
+
+.clearfix {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.evenement_beschrijving {
+  display: inline-block;
+  position: relative;
+  margin-left: 60px;
+  background: white;
+  padding: 1em;
+}
+
+.optredens {
+  display: inline-block;
+}
+
+@media only screen and (min-width: 1200px) {
+  .evenement_beschrijving {
+    margin-left: 0;
+    padding: 1.6em;
+    width: 45%;
+    float: left;
+  }
+
+  .evenement_beschrijving .optredens {
+    position: absolute;
+    width: 100%;
+    left: 125%;
+    top: 6px;
+  }
+
+  .evenement {
+    margin: 4em 0;
+  }
+
+  #agenda {
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+
+  #agenda::before {
+    left: 50%;
+    margin-left: -2px;
+  }
+}
+
+.header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+  z-index: 1;
+}
+
+#menubar {
+  overflow: hidden;
+  background-color: #333;
+  z-index: 1;
+}
+
+@media all and (min-width: 1280px) {
+  #menubar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 24px;
+  }
+}
+
+@media all and (min-width: 800px) and (max-width: 1280px) {
+  #menubar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+  }
+}
+
+@media all and (min-width: 480px) and (max-width: 800px) {
+  #menubar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16px;
+  }
+}
+
+@media all and (min-width: 0px) and (max-width: 480px) {
+  #menubar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 12px;
+  }
+
+}
+
+#menubar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.content {
+
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+@media all and (min-width: 1280px) {
+  .title {
+    font-family: Oxygen, serif;
+    font-size: 90px;
+  }
+}
+
+@media all and (min-width: 800px) and (max-width: 1280px) {
+  .title {
+    font-family: Oxygen, serif;
+    font-size: 90px;
+
+  }
+
+  div.jumbotron {
+    margin: 1em;
+    font-size: xx-small;
+
+  }
+}
+
+@media all and (min-width: 480px) and (max-width: 800px) {
+  .title {
+    font-family: Oxygen, serif;
+    font-size: 48px;
+  }
+
+  div.jumbotron {
+    font-size: 15px;
+    margin: 1em;
+    display: none;
+  }
+}
+
+@media all and (min-width: 0px) and (max-width: 480px) {
+  .title {
+    font-family: Oxygen, serif;
+    font-size: 15px;
+  }
+
+  div.jumbotron {
+    font-size: 15px;
+    margin: 1em;
+    display: none;
+  }
+}
+
+form {
+  padding: 1em;
+  background: #f9f9f9;
+  border: 1px solid #c1c1c1;
+  margin-top: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+}
+
+form input {
+  margin-bottom: 1rem;
+  background: #fff;
+  border: 1px solid #9c9c9c;
+}
+
+form button {
+  background: lightgrey;
+  padding: 0.7em;
+  border: 0;
+}
+
+form button:hover {
+  background: cornflowerblue;
+}
+
+label {
+  text-align: right;
+  display: block;
+  padding: 0.5em 1.5em 0.5em 0;
+}
+
+input {
+  width: 100%;
+  padding: 0.7em;
+  margin-bottom: 0.5rem;
+}
+
+input:focus {
+  outline: 3px solid cornflowerblue;
+}
+
+@media (min-width: 400px) {
+  form {
+    overflow: hidden;
+  }
+
+  label {
+    float: left;
+    width: 200px;
+  }
+
+  input {
+    float: left;
+    width: calc(100% - 200px);
+  }
+
+  .butt {
+    float: right;
+    width: calc(100% - 200px);
+  }
+
+}
+
+.gek {
+  text-align: center;
+}
+
+button.accordion {
+  background-color: lightskyblue;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  max-width: 60%;
+  margin-left: 20%;
+}
+
+div.panel {
+  margin: 2em;
+  padding: 6em 4em;
+  background-color: ghostwhite;
+  font-size: 20px;
+  font-family: "Asul", serif;
+  display: none;
+}
+
+div.jumbotron {
+  padding: 6em 4em;
+  background-color: ghostwhite;
+  font-size: 30px;
+  text-align: center;
+  font-family: "Asul", serif;
+  margin-top: 4em;
+  margin-bottom: 4em;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+div.contactinfo {
+  padding-bottom: 10px;
+  font-size: medium;
+  text-align: center;
+
+}
+
+div.contacttitle {
+  padding-bottom: 5px;
+  font-size: x-large;
+  text-align: center;
+
+}
+
+@media all and (min-width: 1280px) {
+  div.contactinfo {
+    padding-bottom: 10px;
+    font-size: large;
+    text-align: center;
+  }
+
+  div.contacttitle {
+    padding-bottom: 5px;
+    font-size: xx-large;
+    text-align: center;
+  }
+}
+
+@media all and (min-width: 800px) and (max-width: 1280px) {
+  div.contactinfo {
+    padding-bottom: 10px;
+    font-size: medium;
+    text-align: center;
+  }
+
+  div.contacttitle {
+    padding-bottom: 5px;
+    font-size: x-large;
+    text-align: center;
+  }
+}
+
+@media all and (min-width: 480px) and (max-width: 800px) {
+  div.contactinfo {
+    padding-bottom: 10px;
+    font-size: smaller;
+    text-align: center;
+  }
+
+  div.contacttitle {
+    padding-bottom: 5px;
+    font-size: medium;
+    text-align: center;
+  }
+}
+
+@media all and (min-width: 0px) and (max-width: 480px) {
+  div.contactinfo {
+    padding-bottom: 10px;
+    font-size: x-small;
+    text-align: center;
+  }
+
+  div.contacttitle {
+    padding-bottom: 5px;
+    font-size: x-small;
+    text-align: center;
+  }
+}

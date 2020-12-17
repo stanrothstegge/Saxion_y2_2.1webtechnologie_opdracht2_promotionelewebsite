@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body onscroll="scrollFunction()">
+
+<div class="header">
+    <h1 class="title">Novemberfest</h1>
+</div>
+
+<div id="menubar">
+    <a href="Home.html">Home</a>
+    <a href="FAQs.html">FAQs</a>
+    <a style="float: right" href="Contact.html">Contact</a>
+</div>
+
+<div class="content">
+        <div class="contacttitle">
+            <h1>Novemberfest</h1>
+        </div>
+        <div class="contactinfo">
+            <p>Burgemeester Bloemersweg, 6991 Rheden</p>
+            <p>
+                <SCRIPT TYPE="text/javascript">
+                    document.write('06-12345678')
+                </SCRIPT>
+            </p>
+            <p>
+                <SCRIPT TYPE="text/javascript">
+                    document.write('Info@' + 'Novemberfest.nl')
+                </SCRIPT>
+            </p>
+            <NOSCRIPT>
+                Telefoon nummer en email adres zijn beschermd door JavaScript
+            </NOSCRIPT>
+        </div>
+
+        <form id="contactgeg" class="bestelKaartenForm">
+            <p>Mocht u contact met ons op willen nemen dan hebt u de mogelijkheid om te bellen bellen, te mailen of om gebruik te maken van het contactformulier hieronder</p>
+            <br>
+            <label for="firstName">Voornaam</label>
+            <input id="firstName" type="text">
+
+            <label for="lastName">Achtenaam</label>
+            <input id="lastName" type="text">
+
+            <label for="email">Email</label>
+            <input id="email" type="email">
+
+            <label for="telnr">Telefoonnummer</label>
+            <input id="telnr" type="text">
+
+            <label for="comment">Contact</label>
+            <textarea id="comment" name="comment" placeholder="Commentaar" style="height:60px; width: 64.79%"></textarea>
+
+            <input type="button" class="butt" onclick="ValidateInput()" value="submit" />
+        </form>
+</div>
+<script type="text/javascript" src="../JavaScript/Script.js"></script>
+</body>
+</html>
